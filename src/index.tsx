@@ -5,7 +5,7 @@ import { css } from 'aphrodite/no-important';
 
 import Close from 'icons/cross.svg';
 
-import { ModalTypes } from 'constants';
+import { ButtonTypes, ModalTypes } from 'constants';
 import { ModalControlsSettings, ModalSettings } from 'types';
 import { Button } from 'components';
 import { createObserver } from 'utils';
@@ -51,7 +51,7 @@ export const Modal: React.FC<Props> = React.memo(
         case ModalTypes.submit: {
           return (
             <div className={css(styles.controlWrapper(controlsSettings.wrapper)._)}>
-              <Button customStyles={controlsSettings?.submit?.styles} onClick={submitModal}>
+              <Button type={ButtonTypes.submit} customStyles={controlsSettings?.submit?.styles} onClick={submitModal}>
                 {controlsSettings.submit.text}
               </Button>
             </div>
@@ -61,12 +61,13 @@ export const Modal: React.FC<Props> = React.memo(
           return (
             <div className={css(styles.controlWrapper(controlsSettings.wrapper)._)}>
               <Button
+                type={ButtonTypes.cancel}
                 customStyles={{ marginRight: '25px', ...(controlsSettings?.cancel?.styles || {}) }}
                 onClick={closeModal}
               >
                 {controlsSettings.cancel.text}
               </Button>
-              <Button customStyles={controlsSettings?.submit?.styles} onClick={submitModal}>
+              <Button type={ButtonTypes.submit} customStyles={controlsSettings?.submit?.styles} onClick={submitModal}>
                 {controlsSettings.submit.text}
               </Button>
             </div>
