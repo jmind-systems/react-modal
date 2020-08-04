@@ -1,5 +1,5 @@
 {
-  "name": "lib_boilerplate",
+  "name": "@jmind.systems/react-modal",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,11 @@
   },
   "author": "R3tter",
   "license": "MIT",
+  "keywords": [
+    "modal",
+    "react-modal",
+    "jmind.systems"
+  ],
   "jest": {
     "transform": {
       "^.+\\.(ts|js)$": "babel-jest"
@@ -21,6 +26,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
+    "@svgr/webpack": "^5.4.0",
     "babel-jest": "^25.2.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "copy-webpack-plugin": "^6.0.2",
@@ -30,5 +36,14 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/react": "^10.4.7",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "aphrodite": "^2.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
