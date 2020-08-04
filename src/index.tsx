@@ -62,7 +62,7 @@ export const Modal: React.FC<Props> = React.memo(
             <div className={css(styles.controlWrapper(controlsSettings.wrapper)._)}>
               <Button
                 customStyles={{ marginRight: '25px', ...(controlsSettings?.cancel?.styles || {}) }}
-                onClick={submitModal}
+                onClick={closeModal}
               >
                 {controlsSettings.cancel.text}
               </Button>
