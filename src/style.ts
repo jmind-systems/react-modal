@@ -1,6 +1,6 @@
 import { StyleSheet } from 'aphrodite/no-important';
 
-export const controlWrapper = (styles: any) =>
+export const controlWrapper = (styles: any = {}) =>
   StyleSheet.create({
     _: {
       display: 'flex',
@@ -10,7 +10,7 @@ export const controlWrapper = (styles: any) =>
     }
   });
 
-export const root = (styles: any) =>
+export const root = (styles: any = {}) =>
   StyleSheet.create({
     _: {
       position: 'absolute',
@@ -27,7 +27,7 @@ export const root = (styles: any) =>
     }
   });
 
-export const wrapper = (styles: any) =>
+export const wrapper = (styles: any = {}) =>
   StyleSheet.create({
     _: {
       position: 'relative',
@@ -40,7 +40,7 @@ export const wrapper = (styles: any) =>
     }
   });
 
-export const close = (styles: any) =>
+export const close = (styles: any = {}) =>
   StyleSheet.create({
     _: {
       position: 'absolute',

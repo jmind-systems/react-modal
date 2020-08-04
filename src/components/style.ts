@@ -1,7 +1,7 @@
 import { StyleSheet } from 'aphrodite/no-important';
 import { ButtonTypes, ButtonStyles } from 'constants';
 
-export const button = (type: ButtonTypes, customStyles: { [key: string]: string }) =>
+export const button = (type: ButtonTypes, customStyles: { [key: string]: string } = {}) =>
   StyleSheet.create({
     // @ts-ignore
     _: {

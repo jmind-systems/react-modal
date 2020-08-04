@@ -50,7 +50,7 @@ export const Modal: React.FC<Props> = React.memo(
       switch (type) {
         case ModalTypes.submit: {
           return (
-            <div className={css(styles.controlWrapper(controlsSettings.wrapper)._)}>
+            <div className={css(styles.controlWrapper(controlsSettings?.wrapper)._)}>
               <Button type={ButtonTypes.submit} customStyles={controlsSettings?.submit?.styles} onClick={submitModal}>
                 {controlsSettings.submit.text}
               </Button>
@@ -59,7 +59,7 @@ export const Modal: React.FC<Props> = React.memo(
         }
         case ModalTypes.confirm: {
           return (
-            <div className={css(styles.controlWrapper(controlsSettings.wrapper)._)}>
+            <div className={css(styles.controlWrapper(controlsSettings?.wrapper)._)}>
               <Button
                 type={ButtonTypes.cancel}
                 customStyles={{ marginRight: '25px', ...(controlsSettings?.cancel?.styles || {}) }}
@@ -80,10 +80,10 @@ export const Modal: React.FC<Props> = React.memo(
 
     return ReactDOM.createPortal(
       show ? (
-        <div className={css(styles.root(settings.overlayStyles)._)} onClick={closeModal}>
-          <div onClick={(e) => e.stopPropagation()} className={css(styles.wrapper(settings.rootStyles)._)}>
+        <div className={css(styles.root(settings?.overlayStyles)._)} onClick={closeModal}>
+          <div onClick={(e) => e.stopPropagation()} className={css(styles.wrapper(settings?.rootStyles)._)}>
             {settings.withCloseBtn && (
-              <Close className={css(styles.close(settings.closeStyles)._)} onClick={closeModal} />
+              <Close className={css(styles.close(settings?.closeStyles)._)} onClick={closeModal} />
             )}
           </div>
           {children}
