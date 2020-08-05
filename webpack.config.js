@@ -36,6 +36,18 @@ module.exports = {
   optimization: {
     minimize: true
   },
+  externals: {
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react'
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom'
+    }
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
