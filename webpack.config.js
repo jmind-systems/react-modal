@@ -36,6 +36,10 @@ module.exports = {
   optimization: {
     minimize: true
   },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDom'
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
