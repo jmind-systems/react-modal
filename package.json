@@ -1,6 +1,6 @@
 {
   "name": "@jmind.systems/react-modal",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,13 @@
   },
   "author": "R3tter",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmind-systems/react-modal"
+  },
+  "bugs": {
+    "url": "https://github.com/jmind-systems/react-modal/issues"
+  },
   "keywords": [
     "modal",
     "react-modal",
