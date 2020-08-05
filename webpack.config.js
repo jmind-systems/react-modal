@@ -37,8 +37,16 @@ module.exports = {
     minimize: true
   },
   externals: {
-    react: 'React',
-    'react-dom': 'ReactDom'
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react'
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom'
+    }
   },
   plugins: [
     new CopyPlugin({
