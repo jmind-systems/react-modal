@@ -27,7 +27,7 @@ type Props = {
 const observer = createObserver();
 
 export const Modal: React.FC<Props> = React.memo(
-  ({ name, portalId, onClose, onSubmit, settings, children, controlsSettings, type }) => {
+  ({ name, portalId, onClose, onSubmit, settings, children, controlsSettings, type, closeIcon }) => {
     const [show, setShow] = React.useState(false);
 
     const remove = React.useCallback((modalName) => modalName === name && setShow(false), [name]);
@@ -82,10 +82,9 @@ export const Modal: React.FC<Props> = React.memo(
       show ? (
         <div className={css(styles.root(settings?.overlayStyles)._)} onClick={closeModal}>
           <div onClick={(e) => e.stopPropagation()} className={css(styles.wrapper(settings?.rootStyles)._)}>
-            {settings.withCloseBtn && (
+            {settings.withCloseBtn &&
               // @ts-ignore
-              <Close className={css(styles.close(settings?.closeStyles)._)} onClick={closeModal} />
-            )}
+              (closeIcon || <Close className={css(styles.close(settings?.closeStyles)._)} onClick={closeModal} />)}
             {children}
             {buttonsJSX}
           </div>
