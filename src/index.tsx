@@ -84,7 +84,7 @@ export const Modal: React.FC<Props> = React.memo(
           <div onClick={(e) => e.stopPropagation()} className={css(styles.wrapper(settings?.rootStyles)._)}>
             {settings.withCloseBtn &&
               // @ts-ignore
-              (closeIcon || <Close className={css(styles.close(settings?.closeStyles)._)} onClick={closeModal} />)}
+              (closeIcon?.() || <Close className={css(styles.close(settings?.closeStyles)._)} onClick={closeModal} />)}
             {children}
             {buttonsJSX}
           </div>
