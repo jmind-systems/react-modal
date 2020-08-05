@@ -2,11 +2,11 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         use: 'ts-loader',
         exclude: /node_modules/
       },
@@ -18,7 +18,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', '.tsx'],
     alias: {
       utils: path.resolve(__dirname, 'src/utils/'),
       constants: path.resolve(__dirname, 'src/constants/'),

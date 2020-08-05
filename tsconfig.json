@@ -7,9 +7,6 @@
     "lib": ["es2017", "es6", "dom"],
     "moduleResolution": "node",
     "baseUrl": "src",
-    "include": [
-      "custom.d.ts"
-    ],
     "paths": {
       "utils/*": ["utils/*"],
       "utils": ["utils"],
@@ -23,5 +20,8 @@
       "icons": ["icons"]
     },
     "jsx": "react"
-  }
+  },
+  "include": [
+    "custom.d.ts"
+  ]
 }

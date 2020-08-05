@@ -83,6 +83,7 @@ export const Modal: React.FC<Props> = React.memo(
         <div className={css(styles.root(settings?.overlayStyles)._)} onClick={closeModal}>
           <div onClick={(e) => e.stopPropagation()} className={css(styles.wrapper(settings?.rootStyles)._)}>
             {settings.withCloseBtn && (
+              // @ts-ignore
               <Close className={css(styles.close(settings?.closeStyles)._)} onClick={closeModal} />
             )}
           </div>
