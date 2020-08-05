@@ -86,9 +86,9 @@ export const Modal: React.FC<Props> = React.memo(
               // @ts-ignore
               <Close className={css(styles.close(settings?.closeStyles)._)} onClick={closeModal} />
             )}
+            {children}
+            {buttonsJSX}
           </div>
-          {children}
-          {buttonsJSX}
         </div>
       ) : null,
       document.getElementById(portalId)

@@ -34,6 +34,7 @@ export const wrapper = (styles: any = {}) =>
       width: '100%',
       maxWidth: `500px`,
       borderRadius: '15px',
+      padding: '75px 60px 60px',
       boxShadow: '5px 8px 40px 0 rgba(0,0,0, 0.12)',
       background: 'white',
       ...styles
