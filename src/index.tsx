@@ -118,7 +118,7 @@ Modal.propTypes = {
     }),
     wrapper: PropTypes.object
   }),
-  closeIcon: PropTypes.node,
+  closeIcon: PropTypes.func,
   portalId: PropTypes.string
 };
 
