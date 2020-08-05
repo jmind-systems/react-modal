@@ -4,7 +4,10 @@ export type ModalSettings = {
   rootStyles?: { [key: string]: string };
   overlayStyles?: { [key: string]: string };
   withCloseBtn?: boolean;
-  closeStyles?: { [key: string]: string };
+  closeStyles?: {
+    svg: { [key: string]: string };
+    path: { [key: string]: string };
+  };
 };
 
 export type ModalControlsSettings = {

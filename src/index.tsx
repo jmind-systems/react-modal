@@ -52,7 +52,7 @@ export const Modal: React.FC<Props> = React.memo(
           return (
             <div className={css(styles.controlWrapper(controlsSettings?.wrapper)._)}>
               <Button type={ButtonTypes.submit} customStyles={controlsSettings?.submit?.styles} onClick={submitModal}>
-                {controlsSettings.submit.text}
+                {controlsSettings?.submit?.text || 'Submit'}
               </Button>
             </div>
           );
@@ -65,10 +65,10 @@ export const Modal: React.FC<Props> = React.memo(
                 customStyles={{ marginRight: '25px', ...(controlsSettings?.cancel?.styles || {}) }}
                 onClick={closeModal}
               >
-                {controlsSettings.cancel.text}
+                {controlsSettings?.cancel?.text || 'Cancel'}
               </Button>
               <Button type={ButtonTypes.submit} customStyles={controlsSettings?.submit?.styles} onClick={submitModal}>
-                {controlsSettings.submit.text}
+                {controlsSettings?.submit?.text || 'Submit'}
               </Button>
             </div>
           );
@@ -127,14 +127,6 @@ Modal.defaultProps = {
   portalId: 'modal',
   settings: {
     withCloseBtn: true
-  },
-  controlsSettings: {
-    submit: {
-      text: 'Submit'
-    },
-    cancel: {
-      text: 'Cancel'
-    }
   }
 };
 

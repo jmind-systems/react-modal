@@ -41,7 +41,7 @@ export const wrapper = (styles: any = {}) =>
     }
   });
 
-export const close = (styles: any = {}) =>
+export const close = ({ svg, path }: any = {}) =>
   StyleSheet.create({
     _: {
       position: 'absolute',
@@ -50,6 +50,10 @@ export const close = (styles: any = {}) =>
       top: '20px',
       right: '20px',
       cursor: 'pointer',
-      ...styles
+      ':first-child > path': {
+        fill: '#010E28',
+        ...(path || {})
+      },
+      ...(svg || {})
     }
   });
