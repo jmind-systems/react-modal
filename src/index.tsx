@@ -30,11 +30,11 @@ export const Modal: React.FC<Props> = React.memo(
   ({ name, portalId, onClose, onSubmit, settings, children, controlsSettings, type, closeIcon }) => {
     const [show, setShow] = React.useState(false);
 
-    const remove = React.useCallback((modalName) => modalName === name && setShow(false), [name]);
-    const add = React.useCallback((modalName) => modalName === name && setShow(true), [name]);
+    const remove = React.useCallback(() => setShow(false), [name]);
+    const add = React.useCallback(() => setShow(true), [name]);
 
-    observer.subscribe('remove', remove);
-    observer.subscribe('add', add);
+    observer.subscribe('remove', name, remove);
+    observer.subscribe('add', name, add);
 
     const closeModal = React.useCallback(() => {
       remove(name);
