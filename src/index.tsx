@@ -37,12 +37,12 @@ export const Modal: React.FC<Props> = React.memo(
     observer.subscribe('add', name, add);
 
     const closeModal = React.useCallback(() => {
-      remove(name);
+      remove();
       onClose?.();
     }, [onClose, remove]);
 
     const submitModal = React.useCallback(() => {
-      remove(name);
+      remove();
       onSubmit?.();
     }, [onSubmit, remove]);
 
