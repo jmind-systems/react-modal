@@ -7,10 +7,15 @@ export const createObserver = () => {
     observers.set(generateKey(key, name), callback);
   };
 
-  const dispatch = (key: string, name: string) => observers.get(generateKey(key, name))?.();
+  const unsubscribe = (key: string, name: string) => {
+    observers.delete(generateKey(key, name));
+  };
+
+  const dispatch = (key: string, name: string, param?: any) => observers.get(generateKey(key, name))?.(param);
 
   return {
     subscribe,
-    dispatch
+    dispatch,
+    unsubscribe
   };
 };
