@@ -59,7 +59,7 @@ export const Modal: React.FC<Props> = React.memo(
         }
         case ModalTypes.confirm: {
           return (
-            <div className={css(styles.controlWrapper(controlsSettings?.wrapper)._)}>
+            <div className={css(styles.controlWrapper(controlsSettings?.wrapper, true)._)}>
               <Button
                 type={ButtonTypes.cancel}
                 customStyles={{ marginRight: '25px', ...(controlsSettings?.cancel?.styles || {}) }}

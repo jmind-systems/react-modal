@@ -1,10 +1,10 @@
 import { StyleSheet } from 'aphrodite/no-important';
 
-export const controlWrapper = (styles: any = {}) =>
+export const controlWrapper = (styles: any = {}, isConfirm: boolean) =>
   StyleSheet.create({
     _: {
       display: 'flex',
-      justifyContent: 'center',
+      justifyContent: isConfirm ? 'space-between' : 'center',
       marginTop: '20px',
       ...styles
     }
