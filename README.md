@@ -4,6 +4,9 @@
 [codesandbox](https://codesandbox.io/s/brave-monad-jym8f?file=/public/index.html)
 ## Docs
 
+- **addModal** - takes a modal name. Use to open modal.
+- **removeModal** - takes a modal name. Use to close modal.
+- **getIsOpen** - takes a modal name. Return a boolean value.
 - **name**: string - The modal name should be unique
 - **children**: ReactNode - modal content
 - **type**: string: submit, confirm, custom

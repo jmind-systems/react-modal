@@ -26,12 +26,20 @@ type Props = {
 
 const observer = createObserver();
 
+const modals = new Set();
+
 export const Modal: React.FC<Props> = React.memo(
   ({ name, portalId, onClose, onSubmit, settings, children, controlsSettings, type, closeIcon }) => {
     const [show, setShow] = React.useState(false);
 
-    const remove = React.useCallback(() => setShow(false), [name]);
-    const add = React.useCallback(() => setShow(true), [name]);
+    const remove = React.useCallback(() => {
+      setShow(false);
+      modals.delete(name);
+    }, [name]);
+    const add = React.useCallback(() => {
+      setShow(true);
+      modals.add(name);
+    }, [name]);
 
     observer.subscribe('remove', name, remove);
     observer.subscribe('add', name, add);
@@ -131,3 +139,4 @@ Modal.defaultProps = {
 
 export const addModal = (name: string) => observer.dispatch('add', name);
 export const removeModal = (name: string) => observer.dispatch('remove', name);
+export const getIsOpen = (name: string) => modals.has(name);
