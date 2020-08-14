@@ -1,6 +1,6 @@
 import { StyleSheet } from 'aphrodite/no-important';
 
-export const controlWrapper = (styles: any = {}, isConfirm: boolean) =>
+export const controlWrapper = (styles: any = {}, isConfirm?: boolean) =>
   StyleSheet.create({
     _: {
       display: 'flex',
