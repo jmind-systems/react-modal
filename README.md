@@ -1,7 +1,7 @@
 # React-Modal
 
 ### Example
-[codesandbox](https://codesandbox.io/s/brave-monad-jym8f?file=/public/index.html)
+[codesandbox](https://codesandbox.io/s/brave-austin-u81bv?file=/src/App.js)
 ## Docs
 
 - **addModal** - takes a modal name. Use to open modal.

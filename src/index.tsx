@@ -27,7 +27,7 @@ type Props = {
 const observer = createObserver();
 
 export const Modal: React.FC<Props> = React.memo(
-  ({ name, portalId, onClose, onSubmit, settings, children, controlsSettings, type, closeIcon }) => {
+  ({ name, portalId, onClose, onSubmit, settings, children, controlsSettings, type, closeIcon }: Props) => {
     const [show, setShow] = React.useState(false);
 
     const remove = React.useCallback(() => {
