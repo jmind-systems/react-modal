@@ -115,11 +115,11 @@ Modal.propTypes = {
   }),
   controlsSettings: PropTypes.shape({
     close: PropTypes.shape({
-      text: PropTypes.string,
+      text: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
       styles: PropTypes.object
     }),
     submit: PropTypes.shape({
-      text: PropTypes.string,
+      text: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
       styles: PropTypes.object
     }),
     wrapper: PropTypes.object
