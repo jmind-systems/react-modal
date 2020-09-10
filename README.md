@@ -22,11 +22,11 @@
      2. path: object - Use to change close button color
 - **controlsSettings**?: object 
   1. cancel: object - cancel button settings.
-     1. text: string - cancel button text
+     1. text: string | React.Element - cancel button text
      2. styles: object - styles for cancel button. Use this  
        parameter to change default button styles.
   2. submit: object - submit button settings
-     1. text: string - submit button text
+     1. text: string | React.Element - submit button text
      2. styles: object - styles for submit button. Use this  
                parameter to change default button styles.  
   3. wrapper: object - There is a parant div around cancel and submit buttons. 
