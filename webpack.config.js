@@ -38,9 +38,9 @@ module.exports = {
   },
   externals: {
     'aphrodite/no-important': {
-      commonjs: 'aphrodite/no-important.ts',
-      commonjs2: 'aphrodite/no-important.ts',
-      amd: 'aphrodite/no-important.ts'
+      commonjs: 'aphrodite/no-important.js',
+      commonjs2: 'aphrodite/no-important.js',
+      amd: 'aphrodite/no-important.js'
     },
     react: {
       commonjs: 'react',
