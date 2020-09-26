@@ -1,6 +1,6 @@
 {
   "name": "@jmind.systems/react-modal",
-  "version": "0.0.22",
+  "version": "0.0.22-1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,9 @@
       "ts"
     ]
   },
+  "peerDependencies": {
+    "aphrodite": "^2.4.0"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
@@ -47,7 +50,6 @@
   "dependencies": {
     "@babel/preset-react": "^7.10.4",
     "@testing-library/react": "^10.4.7",
-    "@types/aphrodite": "^2.0.0",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
     "prop-types": "^15.7.2"
