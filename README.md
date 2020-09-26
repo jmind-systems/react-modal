@@ -1,5 +1,5 @@
 # React-Modal
-
+**[aphrodite](https://www.npmjs.com/package/aphrodite) is required for react-modal to work**
 ### Example
 [codesandbox](https://codesandbox.io/s/brave-austin-u81bv?file=/src/App.js)
 ## Docs
