@@ -1,6 +1,6 @@
 {
   "name": "@jmind.systems/react-modal",
-  "version": "0.0.22-1",
+  "version": "0.0.23",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,13 +30,11 @@
       "ts"
     ]
   },
-  "peerDependencies": {
-    "aphrodite": "^2.4.0"
-  },
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
     "@svgr/webpack": "^5.4.0",
+    "aphrodite": "^2.4.0",
     "babel-jest": "^25.2.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "copy-webpack-plugin": "^6.0.2",
