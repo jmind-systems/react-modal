@@ -13,7 +13,7 @@ export const controlWrapper = (styles: any = {}, isConfirm?: boolean) =>
 export const root = (styles: any = {}) =>
   StyleSheet.create({
     _: {
-      position: 'absolute',
+      position: 'fixed',
       zIndex: 20,
       display: 'flex',
       justifyContent: 'center',
