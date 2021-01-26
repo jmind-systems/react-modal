@@ -31,7 +31,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: '@jmind.systems/react-modal',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: `(typeof self !== 'undefined' ? self : this)`
   },
   optimization: {
     minimize: true

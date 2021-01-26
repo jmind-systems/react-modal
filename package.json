@@ -1,11 +1,11 @@
 {
   "name": "@jmind.systems/react-modal",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf ./dist && webpack --mode development --config ./webpack.config.js && cp package.json dist/ && cp README.md dist/"
+    "build": "rm -rf ./dist && webpack --mode production --config ./webpack.config.js && cp package.json dist/ && cp README.md dist/"
   },
   "author": "R3tter",
   "license": "MIT",
